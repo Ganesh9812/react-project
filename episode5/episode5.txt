@@ -1,0 +1,23 @@
+chapter 5
+
+usestate is used to create state variables
+
+whenever state variable updates, react will re render the component
+
+data layer will be in sync with UI layer
+
+as the state variable updates UI will update by re rendering
+
+react uses something know as reconciliation algorithm and this its also know react fiber
+
+virtual dom is representation of actual dom
+
+virtual dom is nothing but the react element which is a js object
+
+return <body /> here this is virtual dom
+
+diff algorithm is difference between previous virtual dom and new virtual dom
+
+and then diff algorithm updates the actual dom and thats how the react is fast
+
+virtaul dom is nothing but final react element or final jsx that converted to converted to react element by babel and this react element is nothing but js object rendered as html

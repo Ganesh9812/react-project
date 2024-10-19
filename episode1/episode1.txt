@@ -1,0 +1,42 @@
+do html:5
+gives the basic style of html
+
+after creating githut repo and here do git init to make this now git repository
+
+and do git branch -M main to create main as the main branch
+
+git remote add origin git@github.com:Ganesh9812/namaste-react2024 to set our local to git repo
+
+document getelementbyid all those understood by browser
+but react is not understood by browser
+so to use react get react into the project
+first way to add using cdn
+cdn is a place where react library is hosted and we are fetching that library and putting in our code
+once we place the cdn links, now our project has react inside it
+
+browser does not know react
+we need to configure react into our project
+browser knows the js as it has the js engine
+
+
+how can we inject react into the project
+
+CDN content delivery network these are website where react library is hoisted and we are pulling the react from there and using in our project
+
+first file react.development.js this is the core file of the react
+second file react-dom.development.js for dom for browsers...
+
+react works in phone apps as react native
+
+root is the place where we render everything
+
+End of the day react uses js
+end of the day react is just js piece of code
+
+const heading = React.createElement
+
+this heading is the react element this is nothign but normal js object 
+
+HW
+what is CDN
+what is crossorigin

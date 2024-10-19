@@ -1,0 +1,13 @@
+chapter 4
+
+food ordering app
+props is something we can pass to components or just normal arguments to the functions
+
+config driver UI
+
+controlling UI using the data
+
+for eg: ui driven by config
+based on location we might show banner or not
+
+if we dont use the key react will re render everythings instead of adding one

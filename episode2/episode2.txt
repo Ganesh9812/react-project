@@ -1,0 +1,213 @@
+whatever we can regenerate dont add to git
+
+chapter 2
+
+the code which we return till now above is just html, css and js and react and is it ready to push to production? No
+
+then whats the issue in this code
+
+basically this code needs to optimised. we dont want to put comment console in to our prodution.
+
+we want to minify the code , we want to bundle our code
+
+if we lot of images, we want to optimize
+
+so before pushing the code to prod we need to do lot of processing.
+
+we need to do bundling, code splitting, chunking, image optimisatgioin, compress, minifiy etc..
+
+react is making our app fast, but other packages also help in making react faster
+
+npm is a package manager
+
+manages packages
+
+all the library and utilities that we need comes from npm
+
+all the packages are hosted in npm 
+for any package we can use npm
+lets add npm to our project
+we can do by npm init
+when you do create react app, it has already npm in it
+
+add node package manager to our project
+
+npm init --our project starts using npm
+
+npm init -y skips few thins
+
+package.json is a configuration for npm
+
+npm is package manager that manages all the packages that we install in our system and these packages are also know as dependencies
+
+npm take care of the packages and their version in the package.json
+
+the most important package in our project is a bundler 
+
+bundler does all the compression, cache, minification ect... that we need for production
+
+webpack, parcel etc... are bundlers
+
+create react app uses webpack bundler
+
+here we are using parcel
+
+install parcel
+
+npm install -D parcel -- install parcel as dev dependency
+
+there are 2 types of depencies we can install
+
+one is dev dependency -- it is generally required during the development phase
+normal dependency -- used for production
+
+parcel is beast as it will do lot of things
+
+^ is know as carrot
+
+if new minor upgrade version comes , then if use carror, parcel will automatically upgrades the version
+
+~ will install major version automatically
+
+safe to use carrot
+
+after installing parcel we got package-lock.json as well
+
+package-lock.json keeps a track of the exact package versions of all the dependencies
+
+package-lock.json keeps a hash to verfiy whatever there in my local machine is the same version deployed to production
+
+node modules got into project after installing the parcel dependency
+
+node modules has the actual code of the dependency
+
+parcel again has some other dependencies... and these dependencies has a dependency with other dependency. so lot of packages or dependencies got into node modules when we installed parcel. this is called transitive dependency.
+
+every dependency has its own package.json and it has its own dependencies.
+
+node modules is the collection of the dependencies
+
+node modules is so huge, should we push node modules to github?
+
+No
+
+so put this node modules in git ignore
+
+should i put package.json and package-lock.json into the git?
+yes
+
+both maintains the note of all the dependencies that we need for our project. These are enough to re generate node modules in the server.
+
+what ever you can re generate, so don't put in git
+
+if you delete some dependency and if you do npm i, this will create all the dependencies again in node modules
+
+how to ignite our app
+
+npx parcel index.html
+
+now its like we are hosting our app in the server -- parcel is doing this
+
+just like npm we have npx
+
+npm is like installing a package
+
+npx is like excecting the package
+
+npx means executing a package
+
+npx parcel index.html
+
+here we are executing the parcel where index.html is the source and build a development build app and host this development build app in localhost 1234
+
+previously we injected react using cdn
+
+now another way to inject react into our app is using npm where react is hosted in npm
+
+cdn is not a prefered way to do bring react and react dom
+
+why to make another network call to get the react if we have in node modules
+if version changes then we need to change the cdn
+easy with package versions
+
+install react
+
+npm install react
+npm install react-dom
+not using -D as i need react as normal dependency
+
+and then import react and use it. React from node modules
+
+# Parcel
+
+dev build
+Local server
+Refreshing your page - HMR - Hot Module Replacement
+
+Parcel uses file watching algorithm written in c++
+when ever we do some change in code and save parcel will do HMR using file watching algorithm
+
+parcel also caching things for us to give faster build
+thats y parcel-cache folder is created
+these are binary files
+
+parcel will do image optimisation
+Minification our files
+compress our files
+
+parcel also uses other packages or dependencies to do the above
+
+parcel uses consistent hashing
+
+code splitting
+
+differential bundling - your app can be opened any browsers, so parcel takes care of all that using differential bundling so that support of older browsers will also be there
+
+Diagonstics
+
+Better error handling
+
+right now in dev env our app is hosted on http
+
+parcel can help to host in https
+
+tree shaking - remove unused code for us
+
+parcle creates different build for dev and prod bundles
+
+how to create a prod build
+npx parcel build index.html
+
+and remove main from package.json
+
+when parcel builds a prod ready app, where the build goes --- npx parcel build index.html
+
+so all the things after minification etc... are kept in dist
+
+3 main files we need to care about dist folder where parcels compressed, minified etc....and built these 3 files
+index.html
+index.js
+index.css
+
+npx parcel index.html for dev buiild when we do this dev build or prod build dist and parcel cachel will get generated for the first time and this does not needs to be pushed to github
+
+local code ---- github ---server
+
+server host the app to end user
+
+npx parcel build index.html also runs on server becuase of package.json and we do npm install on server and get the node modules on server and all this because of the package.json
+
+lets make our app compatible with old browsers
+
+browsers list is a npm package
+
+we can add browsers list in the package.json
+
+"browserslist": [
+"last 2 Chrome version",
+"last 2 Firefox version"
+]
+
+this means it will work in all browsers but its must work in the mentioned browsers
+
+by following the above we have created our own create react app

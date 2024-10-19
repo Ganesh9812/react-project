@@ -1,0 +1,85 @@
+chapter 3
+
+npx parcel build index.html
+
+this is executing npm parcel package with index.html source file
+
+lets write a script to shorten these commands
+
+we write commands in package.json script that needs to be executed by npm
+
+now do
+
+npm run and script like npm start
+
+npx parcel index.html now will be npm run start
+
+npm run start or npm start will be same
+
+when we render react element to dom, it becomes an html
+
+React.createElement is complicated with complex html
+
+to avoid this now we have jsx
+
+its a javascript syntax to create elements
+
+react and jsx are different
+
+jsx is just to make our life easy
+
+jsx is a convention where we merge js and html
+
+jsx is not html and jsx is not html inside javascript .. jsx is html or XML like syntax
+
+const jsxHeading = <h1> jsx heading</h1>;
+
+jsxHeading is a react element
+
+here <h1> jsx heading</h1> this piece of code is jsx
+
+when this piece of code is executed, it becomes a react element.
+
+React.createElement("h1", {}, "hello"); this is how you create react element in core react
+
+<h1 id="heading"> jsx heading</h1> this is how you create react element using jsx
+
+js engine does not understand const jsxHeading = <h1> jsx heading</h1>; js engine understands ecma script
+
+this code const jsxHeading = <h1> jsx heading</h1>; renders due to parcel
+
+transpilation is nothing but converting the code
+
+Parcel gives the responsibility of transpilation to babel package
+
+wehn i save jsx , babel convert the jsx to react understands code
+
+jsx is converted to react element which is an js object and rendered as html in the browser
+
+jsx in multiple lines wrap it in () so that babel knows where it starts and where it ends
+
+react components
+
+class based
+functional based
+
+react functionl component is just a normal js function which returns a piece of jsx element or a function which returns a react element as babal converts jsx to react element
+
+create react functional component is capital letter
+
+jsx can be nested
+
+root.render(heading); rendering react element
+
+root.render(<HeadingComponent />); rendering react component which return jsx/react element/react elements
+
+this is how babel understand react element and react component
+
+in jsx if we keep {} we can write any js expression or any js code
+
+component inside component
+
+how to put react element inside a component.. react element is a js object
+
+so we need to put {title} inside a component
+
