@@ -1,0 +1,17 @@
+chapter 6
+
+all the big companies are preferring micro services archetiture
+
+micro serives together forms a project
+
+different teams can work on different services independently and these serives interact with each other
+
+all the servies run on their own port
+
+and each service can maintain individual git rub
+
+useeffect callback function will be called after the component renders
+
+once the page body renders for the first time when you open the page, after the render, then effect callback will be called
+
+whenever the state variable changes, then the component will re render
