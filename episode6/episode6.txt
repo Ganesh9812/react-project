@@ -15,3 +15,16 @@ useeffect callback function will be called after the component renders
 once the page body renders for the first time when you open the page, after the render, then effect callback will be called
 
 whenever the state variable changes, then the component will re render
+
+useeffect
+first function is the callback
+second arg is the dependency array
+
+when will the callback function executed
+once initial render cycle is done, then the callback is called
+
+[] says that callback will be called only after the initial render
+
+
+when we have value for the input text, so here the value of the input box is tied to the searchText
+value={searchText} 
