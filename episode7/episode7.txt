@@ -1,0 +1,59 @@
+chapter 7
+
+useeffect callback function will be called after every render of that component
+
+dependency array changes the behaviour of the useeffect render
+
+if we dont put any dependency arry, useeffect will be rendered after every render
+
+if empty depenency array, then useeffect will be call only once after the initial render
+
+if you put something in the dependency array, then useeffect will be called when the dependency changes
+
+createBrowserRouter will create a routing configuration for us
+
+we can also put error page using errorElement
+
+also for the error component we can use useRouteError
+
+also we can create child routing where like we need to keep header in common in which ever page we go
+
+in header links, better not use <a> tag for links as it will reload the entire page, so link from react router dom
+
+2 types of routing
+client side routing
+server side routing
+
+server side routing --- when you click on some link, page reloads and make a network call orrequest goes to server to fetch the html and then renders
+client side routing- here we are not making any network calls and just components changed
+
+dynamic routing
+
+generally useeffect is called after every render
+if [] then called only after initial render
+if something in dependency array then definitely called after initial render and then called every time my dependency array changes
+
+do not create usestate outside the function component
+its used for creating the local state variables for the component
+better create usestate at the start
+dont create usestate inside if else
+
+
+create router configuration in app.js
+
+react router dom gives an hook called useRouteError
+
+this is the page redirection in terms of url
+
+
+now in header we click on the link, it should go to the respective page
+in react dont use a tag for the links
+because the page will refresh 
+in react we can go the page without reloading the page 
+use link from react-router-dom
+link component works same as a tag and it does not load the page and redirect to the page needed
+instead of href we give to 
+
+
+useparam
+
