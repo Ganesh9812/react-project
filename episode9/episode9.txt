@@ -1,0 +1,46 @@
+chapter 9
+
+custom hooks
+
+why custom hook in restuarant menu component
+
+creating a custom hook is not mandatory but creating it looks more modular
+
+single responsibitility principle if you have any function or component, it should have single responsibility, like only job of the restraurant card should only displaying restaurant card
+
+code becomes reusable, testable, modular
+
+hooks are like utitlity functions
+
+creating a custom hook is not mandatory but creating it makes our code modular
+
+restaurantmenu is doing fetchinb the data and displaying the menu
+
+here restuarant menu should only display the data
+
+when creating a custom hook check for input of the hook and output of the hook so it will be easy while creating the custom hook
+
+bundler does the bundling of our code where all our js code or components are converted into single js file
+
+and for big applications this size of the single js file will get increased which is not good and page will take lot of time to load
+
+how to optimise this
+
+lets make small bundles of these files . this process is known as chunking/code splitting /lazy loading /dynamic bundling / on demand loading
+
+to break our app into small chunks
+
+like you can make a bundle for make my trip for flights, and make a bundle for trains
+
+here lets make different bundle for grocery and rest
+
+so we need to import using lazy loading
+
+so when we launch the app, our code wont load grocery and only when we go to grocery page then only my code loads for grocery
+
+also but now when we click on grocery link, page shows error because react tries to load the grocery component but the code was not there as grocery js file will take few time in browser to present
+that is why react suspended the rendering during that state
+whats y use suspsene with fallback to avoid this 
+in fallback we should give what should react render during this phase until the grocery js file loads 
+
+suspense
