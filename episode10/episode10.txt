@@ -1,0 +1,26 @@
+css
+
+styled components to write css to our components
+
+tailwind css
+
+material ui is a react component library
+
+npm install -D tailwindcss postcss
+npx tailwindcss init
+
+when we do npx tailwindcss init it will create a tailwind.config.js
+
+we need to create a configuration file post css by creating .postcssrc and copy from tailwind
+
+parcel uses postcss to read tailwind
+
+we need to add content and it indicates that in which files we need to use tailwind
+
+now copy index.css from tailwind to our index.css
+
+how tailwind works
+
+we are going put to css class names
+
+tailwind css give class names
