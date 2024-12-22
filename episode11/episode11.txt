@@ -1,0 +1,57 @@
+how to manage data in our application
+
+higher order components
+
+higher order component is a function that takes a component and returns a component
+
+this takes a component and enhances and then returns
+
+UI is different and data part is different in react
+ 
+data layer is very important
+
+all the react applications has UI layer and data layer and UI layer is powered by data layer
+
+data layer is props, state etc..
+
+UI layer is the jsx
+
+we should know more on how to manage data
+
+controlled component and uncontrolled component
+
+lifting the state up
+
+
+
+props drilling
+
+data in react flows in one direction from parent to child
+
+so data needs to flow all through all components
+
+so one or two levels passing props fine, lets say we need pass props to more levels, so this is not recommended instead we can use react context
+
+by this we can access data at any place
+
+react context
+
+so using react context we can avoid props drilling
+
+context is like a global place where anyone can access
+
+this context is like a global kind of object for react
+
+using createContext we create the context
+
+in createContext we give the information that we hold
+
+react has usecontext hook using which we can access context
+
+UserContext.provider helps you to override the default context value
+
+we wrapped UserContext.provider in the whole app
+
+thats y all places in the app, the new value will be updated
+
+alternative for context is redux
