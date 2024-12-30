@@ -1,0 +1,89 @@
+redux works on the data layer
+
+how we can create redux store
+
+how we can manage data using redux
+
+using redux is not mandatory
+
+for small applications don't need redux
+
+react and redux are different library
+
+redux is used for state managementx
+
+alternative of redux is zustand
+
+when using redux dev tools application becomes easy to debug
+
+2 libraries that redux offers
+react redux - bridge between react and redux
+redux toolkit - package is standard way to write redux logic
+
+redux store is big whole object and kept in central global place and any component can access this redux store
+
+we can keep our entire data in redux store because redux store has slices
+
+slice is small portion of the redux store
+
+for suppose we create a separate slice for cart data which cart slice
+
+user slice
+
+theme slice
+
+this cart slice will have all the data of the cart
+
+how does the data go to cart slice
+
+we cannot add directly or modify the cart slice
+
+when we click on the add item, it dispatch an action, this action calls a function and the function modify or updates the cart slice
+
+this function is basically known as the reducer
+
+now read data for cart slice
+
+for reading data we use selector to read the data from store and modify the react component
+
+this is subscribe to the store, where if data in store changes my component updates
+
+we subscribe to the store using a selector
+
+install redux tool kit
+
+install react redux
+
+first build our own store in the utils appStore.js
+
+now provide this store to our application
+
+now find the root of the application
+
+and connect the store and root of the application using provider that comes from react-redux and pass the store to the provider as props
+
+now create cart slice using createSlice and we pass configuration like initialstate like initial state of the cart, and then reducers where it can contain additem reducer etc.. which modifies the slice of the cart, reducer gets the access to initial state and also gets access to the action and it will modify the state based on the action
+
+when we click on add item we get payload
+
+now we will export our actions and reducers
+
+now add the slice to the store
+
+store also has a reducer for it and this reducer combines the reducers of these slices
+
+basically a reducer is nothing but which modifies soemthing like slice or store
+
+so slice has its reducers and store has its reducer
+
+we use selector to read from the slice
+
+its a hook
+
+this hook gives access to the store
+
+subsribing to the store using selector
+
+we tell to the selector what portion of the store we need access to
+
+now in itemlist we can add item by clicking add item button ..on click of it we first dispatch an action using useDispatch given by hook
